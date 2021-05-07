@@ -1,0 +1,12 @@
+<div class="d-f f-c b2">
+    <div class="d-f jc-sb">
+        <app-timer (emitUpdatedTimer)="emitUpdatedTimer($event)" [pauseTimer]="pauseTimer" [timerValue]="timerValue"
+            class="f1"></app-timer>
+        <app-timer-limit [updatedTimerValue]="timerValue" (resetTimerEmitter)="resetTimerEmitter($event)"
+            (startTimerEmitter)="startTimerEmitter($event)" class="f2"></app-timer-limit>
+    </div>
+    <div class="d-f jc-sb">
+        <app-log-timer class="f1" [logTimer]="logTimer"></app-log-timer>
+        <app-count-clicks class="f2" [logTimer]="logTimer"></app-count-clicks>
+    </div>
+</div>

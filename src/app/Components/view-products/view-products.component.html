@@ -1,0 +1,21 @@
+<div class="mainDiv">
+    <div id="btnContainer">
+        <button class="btn" (click)="updateDisplay(1)"><i class="fa fa-bars"></i></button>
+        <button class="btn active" (click)="updateDisplay(2)"><i class="fa fa-th-large"></i></button>
+        <select id="sort-by" (change)="customSort($event)">
+            <option value="" selected disabled hidden>Sort By</option>
+            <option value="Low">PRICE: Low To High</option>
+            <option value="High">PRICE: High To Low</option>
+        </select>
+    </div>
+
+    <div class="row">
+        <ng-container *ngFor="let product of products">
+            <div class="productsDiv" [ngStyle]="{'width': displayMode == 1 ? '40rem': '25rem'}">
+                <span>ID: {{product.id}}</span>
+                <span>Name: {{product.title}}</span>
+                <span>Price: Rs {{product.price}}</span>
+            </div>
+        </ng-container>
+    </div>
+</div>

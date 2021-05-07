@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Rahul",
+        "class": "3",
+        "section": "A",
+        "sub1": "23",
+        "sub2": "45",
+        "sub3": "55"
+    },
+    {
+        "name": "Ria",
+        "class": "3",
+        "section": "A",
+        "sub1": "28",
+        "sub2": "42",
+        "sub3": "50"
+    },
+    {
+        "name": "Sapna",
+        "class": "3",
+        "section": "A",
+        "sub1": "93",
+        "sub2": "45",
+        "sub3": "75"
+    },
+    {
+        "name": "Rohan",
+        "class": "3",
+        "section": "A",
+        "sub1": "22",
+        "sub2": "46",
+        "sub3": "53"
+    }
+]

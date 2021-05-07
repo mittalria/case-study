@@ -1,0 +1,15 @@
+<div class="mainDiv">
+    <div class="p1 d-f">
+        <span id="s1">Enter Timer Limit</span>
+        <div class="d-f f-c">
+            <input name="timer" [(ngModel)]="timerLimit" />
+            <div class="d-f mt-1">
+                <button (click)="startPauseTimer()">Start / Pause</button>
+                <button (click)="resetTimer()">Reset</button>
+            </div>
+        </div>
+    </div>
+    <ng-container *ngFor="let i of pausedList">
+        <span class="ml-1">Paused at {{i}}</span><br>
+    </ng-container>
+</div>

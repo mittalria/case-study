@@ -1,0 +1,66 @@
+<!-- <div>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Class</th>
+                <th>Section</th>
+                <th>Sub1</th>
+                <th>Sub2</th>
+                <th>Sub3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of marksData">
+                <td>{{ item.name }}</td>
+                <td>{{ item.class }}</td>
+                <td>{{ item.section }}</td>
+                <td>{{ item.sub1}}</td>
+                <td>{{ item.sub2 }}</td>
+                <td>{{ item.sub3 }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div> -->
+
+<div class="example-container mat-elevation-z8">
+    <mat-table #table [dataSource]="dataSource" matSort>
+
+        <!-- name Column -->
+        <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+        </ng-container>
+
+        <!-- class Column -->
+        <ng-container matColumnDef="class">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Class </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.class}} </mat-cell>
+        </ng-container>
+
+        <!-- section Column -->
+        <ng-container matColumnDef="section">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Section </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.section}} </mat-cell>
+        </ng-container>
+
+        <!-- sub1 Column -->
+        <ng-container matColumnDef="sub1">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Sub1 </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.sub1}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="sub2">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Sub2 </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.sub2}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="sub3">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Sub3 </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.sub3}} </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="columns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: columns;"></mat-row>
+    </mat-table>
+</div>

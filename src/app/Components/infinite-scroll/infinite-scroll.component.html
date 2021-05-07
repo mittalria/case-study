@@ -1,0 +1,10 @@
+<div class="search-results" infinite-scroll [infiniteScrollDistance]="scrollDistance"
+    [infiniteScrollUpDistance]="scrollUpDistance" [infiniteScrollThrottle]="throttle" (scrolled)="onScrollDown($event)">
+    <ng-container *ngFor="let item of array;let i = index">
+        <div
+            style="height: 200px; width: 200px;border: 1px solid;display: flex;align-items: center;justify-content: center; margin: 1rem;">
+            <button (click)="onButtonClick(i+1)">Click me! {{i+1}}</button>
+        </div>
+    </ng-container>
+
+</div>
